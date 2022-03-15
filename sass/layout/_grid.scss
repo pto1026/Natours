@@ -1,0 +1,50 @@
+.row {
+    max-width: $grid-width;
+    background-color: #eee;
+    margin: 0 auto;
+    
+    display: flex;
+    gap: $gutter-horizontal;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    // @include clearfix;
+
+    [class^="col-"] {
+
+    }
+
+    .col-1-of-2 {
+        
+        flex: 0 0 calc((100% - #{$gutter-horizontal}) / 2);
+        // flex: 0 0 50%;
+
+       
+    }
+
+    .col-1-of-3 {
+        flex: 0 0 calc((100% - 2* #{$gutter-horizontal}) / 3);
+
+    }
+    .col-2-of-3 {
+        flex: 0 0 calc(2* ((100% - 2* #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+
+    }
+
+    .col-1-of-4 {
+        flex: 0 0 calc((100% - 3* #{$gutter-horizontal}) / 4);
+
+    }
+
+    .col-2-of-4 {
+        flex: 0 0 calc(2 *((100% - 3* #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+
+    }
+
+    .col-3-of-4 {
+        flex: 0 0 calc(3 *((100% - 3* #{$gutter-horizontal}) / 4) + 2* #{$gutter-horizontal});
+
+    }
+}
